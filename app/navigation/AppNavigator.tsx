@@ -21,7 +21,7 @@ const AppNavigator: React.FC = () => {
         <Stack.Screen name="Onboarding" component={OnboardingScreen} options={{ headerShown: false }}/>
         <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }}/>
         <Stack.Screen name="Signup" component={SignupScreen} options={{ headerShown: false }} />
-        <Stack.Screen name="HomeScreen" component={HomeScreen} />
+        <Stack.Screen name="HomeScreen" component={HomeScreen} options={{ headerShown: false }}/>
         <Stack.Screen name="BottomTabNavigator" component={BottomTabNavigator} options={{ headerShown: false }} />
         <Stack.Screen name="Screen1" component={Screen1} />
         <Stack.Screen name="Screen2" component={Screen2} />
