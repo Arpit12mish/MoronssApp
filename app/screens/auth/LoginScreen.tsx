@@ -10,9 +10,7 @@ const LoginScreen: React.FC<Props> = ({ navigation }) => {
   const [mobile, setMobile] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleLogin = () => {
-    // Handle login logic
-  }; 
+  
 
   return (
     <View style={styles.container}>
@@ -44,7 +42,7 @@ const LoginScreen: React.FC<Props> = ({ navigation }) => {
         <Text style={styles.forgotPasswordText}>Forgot Password?</Text>
       </TouchableOpacity>
 
-      <TouchableOpacity style={styles.primaryButton} onPress={handleLogin}>
+      <TouchableOpacity style={styles.primaryButton} onPress={() => navigation.navigate('HomeScreen')}>
         <Text style={styles.buttonText}>Sign In</Text>
       </TouchableOpacity>
 

@@ -12,9 +12,6 @@ const SignupScreen: React.FC<Props> = ({ navigation }) => {
   const [officialEmail, setOfficialEmail] = useState('');
   const [agreedToTerms, setAgreedToTerms] = useState(false);
 
-  const handleSignup = () => {
-    // Handle signup logic 
-  };
 
   return (
     <View style={styles.container}>
@@ -55,7 +52,7 @@ const SignupScreen: React.FC<Props> = ({ navigation }) => {
 
       
 
-      <TouchableOpacity style={styles.primaryButton} onPress={handleSignup}>
+      <TouchableOpacity style={styles.primaryButton} onPress={() => navigation.navigate('HomeScreen')}>
         <Text style={styles.buttonText}>Sign Up</Text>
       </TouchableOpacity>
 
