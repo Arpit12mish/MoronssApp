@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, Dimensions } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { StackScreenProps } from '@react-navigation/stack';
 import { RootStackParamList } from '../../navigation/RootStackParamList';
 
 type Props = StackScreenProps<RootStackParamList, 'Login'>;
 
+const { width, height } = Dimensions.get('window');
+
 const LoginScreen: React.FC<Props> = ({ navigation }) => {
   const [mobile, setMobile] = useState('');
   const [password, setPassword] = useState('');
-
-  
 
   return (
     <View style={styles.container}>
@@ -71,76 +71,76 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 20,
+    padding: width * 0.05,
     backgroundColor: '#F5F5F5',
   },
   title: {
-    fontSize: 24,
+    fontSize: width * 0.06,
     fontWeight: 'bold',
-    marginBottom: 20,
+    marginBottom: height * 0.02,
     color: '#000000',
     fontFamily: 'Poppins',
   },
   label: {
     alignSelf: 'flex-start',
-    marginBottom: 5,
-    fontSize: 16,
+    marginBottom: height * 0.005,
+    fontSize: width * 0.04,
     fontWeight: 'bold',
     color: '#000000',
     fontFamily: 'Poppins',
   },
   inputContainer: {
     width: '100%',
-    marginBottom: 20,
+    marginBottom: height * 0.02,
   },
   input: {
     width: '100%',
-    padding: 15,
+    padding: width * 0.04,
     borderWidth: 1,
     borderColor: '#000000',
     borderRadius: 8,
-    fontSize: 14,
+    fontSize: width * 0.04,
     color: '#000000',
     fontFamily: 'Poppins',
   },
   forgotPassword: {
     alignSelf: 'flex-end',
-    marginBottom: 30,
+    marginBottom: height * 0.03,
   },
   forgotPasswordText: {
-    fontSize: 14,
+    fontSize: width * 0.035,
     color: 'rgba(0, 0, 0, 0.5)',
     fontFamily: 'Poppins',
   },
   primaryButton: {
     backgroundColor: '#FFCB47',
-    paddingVertical: 15,
-    paddingHorizontal: 140,
+    paddingVertical: height * 0.02,
+    paddingHorizontal: width * 0.35,
     borderRadius: 8,
-    marginTop: 20,
+    marginTop: height * 0.02,
     borderColor: '#000000',
     borderWidth: 1.5,
   },
   buttonText: {
     color: '#000000',
     textAlign: 'center',
-    fontSize: 18,
+    fontSize: width * 0.045,
     fontWeight: 'bold',
     fontFamily: 'Poppins',
   },
   container1: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginVertical: 20,
+    marginVertical: height * 0.02,
   },
   line: {
     flex: 1,
     height: 2,
     backgroundColor: '#000000',
-    marginHorizontal: 10,
+    marginHorizontal: width * 0.02,
   },
   signInWith: {
-    fontSize: 16,
+    fontSize: width * 0.04,
     fontWeight: 'bold',
     color: '#000000',
     fontFamily: 'Poppins',
@@ -149,18 +149,18 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-around',
     width: '60%',
-    marginTop: 10,
+    marginTop: height * 0.01,
   },
   socialIcon: {
-    padding: 10,
+    padding: width * 0.02,
     borderRadius: 50,
     backgroundColor: '#FFFFFF',
   },
   newUserSignUp: {
-    marginTop: 20,
+    marginTop: height * 0.02,
   },
   newUserSignUpText: {
-    fontSize: 16,
+    fontSize: width * 0.04,
     fontWeight: 'bold',
     color: '#000000',
     fontFamily: 'Poppins',
